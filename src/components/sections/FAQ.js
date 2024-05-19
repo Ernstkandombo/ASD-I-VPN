@@ -22,18 +22,18 @@ export default function FAQ() {
                 <AccordionItem>
                     <AccordionTrigger className="text-lg font-bold">How is my privacy protected?</AccordionTrigger>
                     <AccordionContent>
-                        We use the most advanced protocol, WireGuard®, to encrypt your network activity and hide your IP address.
+                        We use the most advanced protocol, WireGuard&reg;, to encrypt your network activity and hide your IP address.
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem>
-                    <AccordionTrigger className="text-lg font-bold">What is the VPN's refund policy?</AccordionTrigger>
+                    <AccordionTrigger className="text-lg font-bold">What is the VPN&apos;s refund policy?</AccordionTrigger>
                     <AccordionContent>
                         You can request a refund within the first 30 days of your subscription.
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
             <div className="text-center">
-                <Button className="bg-black text-white py-3 px-6 rounded-full"> Join the Waitlist </Button>
+                <Button className="bg-black text-white py-3 px-6 rounded-full">Join the Waitlist</Button>
             </div>
         </section>
     )

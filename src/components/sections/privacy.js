@@ -8,7 +8,7 @@ export default function privacy() {
             <div className="lg:flex lg:space-x-8">
                 <Card className="lg:w-1/2 bg-white shadow p-8 rounded-lg mb-8 lg:mb-0">
                     <h2 className="text-2xl font-bold mb-4">Your privacy comes first</h2>
-                    <p className="text-gray-600">We don't store your online activity logs on our servers.</p>
+                    <p className="text-gray-600">We don&apos;t store your online activity logs on our servers.</p>
                     <img src="path_to_privacy_image" alt="Privacy" className="mt-4 mx-auto max-w-full h-auto" />
                 </Card>
                 <Card className="lg:w-1/2 bg-white shadow p-8 rounded-lg">
