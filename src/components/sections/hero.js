@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import { Button } from '../ui/button'
+import Image from 'next/image'
 
 export default function hero() {
     return (
@@ -12,7 +14,7 @@ export default function hero() {
                 <p className="text-sm text-gray-600 py-2">Available on: <span className="font-bold">Windows, Android, iOS</span>. Mac & Linux coming soon.</p>
             </div>
             <div>
-                <img src="https://placehold.co/400x400" alt="VPN illustration" className="mt-8 mx-auto max-w-full h-auto" />
+                <Image src="" width={400} height={400} alt="VPN illustration" />
             </div>
         </section>
     )
