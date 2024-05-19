@@ -2,19 +2,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
-
+import Nav from "@/components/sections/nav";
+import Hero from "@/components/sections/hero";
 export default function Home() {
   return (
     <div className="bg-white text-gray-800 font-sans">
       {/* Header */}
-      <header className="flex flex-wrap justify-between items-center p-6 bg-white shadow">
-        <div className="text-xl font-bold">VPN Company</div>
-        <div className="flex space-x-2 mt-4 lg:mt-0">
-          <Button className="bg-gray-100 text-gray-800 py-2 px-4 rounded">Join the Waitlist</Button>
-          <Button className="bg-gray-100 text-gray-800 py-2 px-4 rounded">Sign In</Button>
-        </div>
-      </header>
+      <Nav />
 
       {/* Main Content Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,14 +18,8 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <section className="text-center py-20 bg-white">
-          <h1 className="text-4xl font-bold mb-4">Security you can rely on. A name you can trust.</h1>
-          <p className="text-lg mb-8">A VPN from the trusted pioneer in internet privacy.</p>
-          <Button className="bg-black text-white py-3 px-6 rounded-full mb-8">Join the Waitlist</Button>
-          <p className="text-sm text-gray-600">We currently offer VPN in the US, UK, Canada, New Zealand, Singapore, and Malaysia.</p>
-          <p className="text-sm text-gray-600">Available on: <span className="font-bold">Windows, Android, iOS</span>. Mac & Linux coming soon.</p>
-          <img src="path_to_image" alt="VPN illustration" className="mt-8 mx-auto max-w-full h-auto" />
-        </section>
+
+        <Hero />
 
         {/* Ad Space Middle */}
         <div className="bg-gray-200 text-center py-4 mb-8">
