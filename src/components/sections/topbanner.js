@@ -2,7 +2,8 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 
-export default function Topbanner() {
+// Renamed to start with an uppercase letter
+export default function TopBanner() {
     useEffect(() => {
         const fetchData = async () => {
             try {

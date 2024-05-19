@@ -9,7 +9,7 @@ import Avaliability from "@/components/sections/avaliability";
 import About from "@/components/sections/about";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/footer";
-import Topbanner from "@/components/sections/Topbanner";
+import Topbanner from "@/components/sections/topbanner";
 
 
 import React, { useEffect } from "react";
