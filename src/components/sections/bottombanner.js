@@ -34,7 +34,7 @@ export default function BottomBanner() {
 
 
     return (
-        <div className="bg-gray-200 text-center py-4 mb-8">
+        <div className="flex flex-col justify-center items-center bg-gray-50 text-center py-4 mb-8 mx-auto ">
             <a className="anchorElement">
                 <p className="headerText"></p>
                 <img className="advertIMG" style={{ width: '100%' }} alt="Ad Space Bottom" />
