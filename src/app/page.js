@@ -1,5 +1,4 @@
-'use client'
-import { Button } from "@/components/ui/button";
+
 
 import Nav from "@/components/sections/nav";
 import Hero from "@/components/sections/hero";
@@ -10,45 +9,11 @@ import About from "@/components/sections/about";
 
 import Footer from "@/components/sections/footer";
 import Topbanner from "@/components/sections/topbanner";
+import MiddleBanner from "@/components/sections/middlebanner";
+import BottomBanner from "@/components/sections/bottombanner";
 
-
-import React, { useEffect } from "react";
-import axios from "axios";
 
 export default function Home() {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post(
-          "https://ad.simaneka.com/api/get",
-          {
-            type: "Horizontal Strip",
-            tags: "vpn",
-          },
-          {
-            headers: {
-              authorisation: "blBzASr9NULmht7w5Y4fBWmDv8LQJNme",
-            },
-          }
-        );
-        console.log(response.data);
-        document.querySelectorAll(".advertIMG").forEach((img) => {
-          img.src = response.data.link;
-          img.alt = response.data.alt;
-        });
-        document.querySelectorAll(".anchorElement").forEach((a) => {
-          a.href = response.data.href;
-        });
-        document.querySelectorAll(".headerText").forEach((p) => {
-          p.innerHTML = response.data.message;
-        });
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <div className="bg-white text-gray-800 font-sans">
@@ -68,12 +33,7 @@ export default function Home() {
         {/* Features Section */}
         <Features />
         {/* Ad Space Middle */}
-        <div className="bg-gray-200 text-center py-4 mb-8">
-          <a className="anchorElement" href="#">
-            <p className="headerText">Ad Space Middle</p>
-            <img className="advertIMG mx-auto" alt="Ad Space Middle" />
-          </a>
-        </div>
+        <MiddleBanner />
 
         {/* Availability Section */}
         <Avaliability />
@@ -81,12 +41,7 @@ export default function Home() {
         {/* About Us Section */}
         <About />
         {/* Ad Space Bottom */}
-        <div className="bg-gray-200 text-center py-4 mb-8">
-          <a className="anchorElement" href="#">
-            <p className="headerText">Ad Space Bottom</p>
-            <img className="advertIMG mx-auto" alt="Ad Space Bottom" />
-          </a>
-        </div>
+        <BottomBanner />
       </main>
 
       {/* Footer */}
