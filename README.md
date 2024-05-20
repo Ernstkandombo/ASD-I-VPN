@@ -14,7 +14,7 @@ You can visit the live website at: [https://asd-vpn.vercel.app/](https://asd-vpn
 
 Below is an example of the ads designed for the website:
 
-![ASD-VPN EK VPN]([https://via.placeholder.com/1920x768](https://ad.simaneka.com/assets/ads//blazingfastvpn2024_May_Sun_22_23_24.png)) <!-- Replace with the actual URL if hosting the image online -->
+![ASD-VPN EK VPN](https://ad.simaneka.com/assets/ads//blazingfastvpn2024_May_Sun_22_23_24.png) <!-- Replace with the actual URL if hosting the image online -->
 
 ## Technologies Used
 
