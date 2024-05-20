@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function nav() {
     return (
-        <header className="flex flex-wrap justify-between items-center py-2 shadow">
+        <header className="flex flex-wrap justify-between items-center py-2 shadow z-50	">
             <div className="container flex justify-between items-center">
                 <div className=" flex gap-2 text-xl justify-center items-center font-bold">
                     <Image src="/assets/icons8-kerio-control-480.png" width={100} height={100} alt="logo" className="w-10 h-10" />

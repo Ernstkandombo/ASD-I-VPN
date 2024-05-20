@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import Nav from "@/components/sections/nav";
 import Hero from "@/components/sections/hero";
 import Features from "@/components/sections/features";
-import Privacy from "@/components/sections/privacy";
+
 import Avaliability from "@/components/sections/avaliability";
 import About from "@/components/sections/about";
-import FAQ from "@/components/sections/FAQ";
+
 import Footer from "@/components/sections/footer";
 import Topbanner from "@/components/sections/topbanner";
 
@@ -57,12 +57,16 @@ export default function Home() {
 
       {/* Main Content Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Ad Space Top */}
-        <Topbanner />
 
         {/* Hero Section */}
         <Hero />
+        {/* Ad Space Top */}
+        <Topbanner />
 
+
+
+        {/* Features Section */}
+        <Features />
         {/* Ad Space Middle */}
         <div className="bg-gray-200 text-center py-4 mb-8">
           <a className="anchorElement" href="#">
@@ -71,21 +75,11 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Features Section */}
-        <Features />
-
-        {/* Privacy and Pricing Section */}
-        <Privacy />
-
         {/* Availability Section */}
         <Avaliability />
 
         {/* About Us Section */}
         <About />
-
-        {/* FAQs Section */}
-        <FAQ />
-
         {/* Ad Space Bottom */}
         <div className="bg-gray-200 text-center py-4 mb-8">
           <a className="anchorElement" href="#">

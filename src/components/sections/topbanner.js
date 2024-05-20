@@ -7,7 +7,7 @@ export default function TopBanner() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post(
+                const response = await axios.get(
                     "https://ad.simaneka.com/api/get",
                     {
                         type: "Thick Horizontal",
@@ -20,16 +20,10 @@ export default function TopBanner() {
                     }
                 );
                 console.log(response.data);
-                document.querySelectorAll(".advertIMG").forEach((img) => {
-                    img.src = response.data.link;
-                    img.alt = response.data.alt;
-                });
-                document.querySelectorAll(".anchorElement").forEach((a) => {
-                    a.href = response.data.href;
-                });
-                document.querySelectorAll(".headerText").forEach((p) => {
-                    p.innerHTML = response.data.message;
-                });
+                document.querySelector(".advertIMG").src = response.data.link;
+                document.querySelector(".advertIMG").alt = response.data.alt;
+                document.querySelector(".anchorElement").href = response.data.href;
+                document.querySelector(".headerText").innerHTML = response.data.message;
             } catch (error) {
                 console.error(error);
             }
@@ -41,9 +35,10 @@ export default function TopBanner() {
 
     return (
         <div className="bg-gray-200 text-center py-4 mb-8">
-            <a className="anchorElement" href="#">
-                <p className="headerText">Ad Space Top</p>
-                <img className="advertIMG mx-auto" alt="Ad Space Top" />
+            <a className="anchorElement">
+                <p className="headerText"></p>
+                <img className="advertIMG" style={{ width: '100%' }} alt="Ad Space Top" />
+
             </a>
         </div>
     );
