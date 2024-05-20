@@ -4,33 +4,33 @@ import axios from "axios";
 
 // Renamed to start with an uppercase letter
 export default function MiddleBanner() {
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.post(
-                    "https://ad.simaneka.com/api/get",
-                    {
-                        type: "Thick Horizontal",
-                        tags: "vpn",
+    // useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.post(
+                "https://ad.simaneka.com/api/get",
+                {
+                    type: "Thick Horizontal",
+                    tags: "vpn",
+                },
+                {
+                    headers: {
+                        authorisation: "blBzASr9NULmht7w5Y4fBWmDv8LQJNme",
                     },
-                    {
-                        headers: {
-                            authorisation: "blBzASr9NULmht7w5Y4fBWmDv8LQJNme",
-                        },
-                    }
-                );
-                console.log(response.data);
-                document.querySelector(".advertIMG").src = response.data.link;
-                document.querySelector(".advertIMG").alt = response.data.alt;
-                document.querySelector(".anchorElement").href = response.data.href;
-                document.querySelector(".headerText").innerHTML = response.data.message;
-            } catch (error) {
-                console.error(error);
-            }
-        };
+                }
+            );
+            console.log(response.data);
+            document.querySelector(".advertIMG").src = response.data.link;
+            document.querySelector(".advertIMG").alt = response.data.alt;
+            document.querySelector(".anchorElement").href = response.data.href;
+            document.querySelector(".headerText").innerHTML = response.data.message;
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
-        fetchData();
-    }, []);
+    fetchData();
+    // }, []);
 
 
     return (
