@@ -27,9 +27,6 @@ export default function Home() {
         <Hero />
         {/* Ad Space Top */}
         <Topbanner />
-
-
-
         {/* Features Section */}
         <Features />
         {/* Ad Space Middle */}

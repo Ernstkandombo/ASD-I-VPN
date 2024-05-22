@@ -1,44 +1,43 @@
 'use client'
-import React, { useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from 'react';
 
 // Renamed to start with an uppercase letter
 export default function MiddleBanner() {
-    // useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await axios.post(
-                "https://ad.simaneka.com/api/get",
-                {
-                    type: "Thick Horizontal",
-                    tags: "vpn",
-                },
-                {
+    useEffect(() => {
+        const fetchData = async () => {
+            const formdata = new FormData();
+            formdata.append("type", "Horizontal strip");
+            formdata.append("tags", "network");
+
+            try {
+                const response = await fetch("https://ad.simaneka.com/api/get", {
+                    method: "POST",
                     headers: {
-                        authorisation: "blBzASr9NULmht7w5Y4fBWmDv8LQJNme",
+                        "authorisation": "blBzASr9NULmht7w5Y4fBWmDv8LQJNme",
                     },
-                }
-            );
-            console.log(response.data);
-            document.querySelector(".advertIMG").src = response.data.link;
-            document.querySelector(".advertIMG").alt = response.data.alt;
-            document.querySelector(".anchorElement").href = response.data.href;
-            document.querySelector(".headerText").innerHTML = response.data.message;
-        } catch (error) {
-            console.error(error);
-        }
-    };
+                    body: formdata,
+                });
 
-    fetchData();
-    // }, []);
+                const data = await response.json();
 
+                console.log(data);
+
+                document.querySelector('.advertIMG').src = data.link;
+                document.querySelector('.advertIMG').alt = data.alt;
+                document.querySelector('.anchorElement').href = data.href;
+                document.querySelector('.headerText').innerHTML = data.message;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
-        <div className="flex flex-col justify-center items-center bg-gray-50 text-center py-4 mb-8 mx-auto ">
+        <div className="flex flex-col justify-center items-center text-center py-4 mb-8 mx-auto" style={{ height: '200px' }}>
             <a className="anchorElement">
-                <p className="headerText"></p>
-                <img className="advertIMG" style={{ width: '100%' }} alt="Ad Space Middle" />
-
+                <img className="advertIMG" style={{ maxHeight: '200px', maxWidth: '100%' }} />
             </a>
         </div>
     );
